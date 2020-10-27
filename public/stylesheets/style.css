@@ -237,7 +237,7 @@ a {color: var(--anchor);}
 
 .task--action .complete {color:var(--completed);}
 .task--action .pending {color:var(--pending)}
-.task--action .archive {color:var(--archived);}
+.task--action .archive {color:var(--sec-textcolor);}
 .task--action .draft {color:var(--draft);}
 .task--action .edit {color:var(--pending)}
 
