@@ -30,11 +30,11 @@ accordion.forEach(accordion => {
         this.classList.toggle("focus");
         const content = this.nextElementSibling;
     
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
+        if (content.style.height) {
+            content.style.height = null;
             content.classList.remove('focus');
         } else {            
-            content.style.maxHeight = (content.scrollHeight + 40) + "px";
+            content.style.height = (content.scrollHeight) + "px";
             content.classList.add('focus');      
         } 
     
