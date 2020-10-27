@@ -16,6 +16,8 @@ let action;
 let body;
 let url;
 
+window.scrollTo(0, 0);
+
 accordion.forEach(accordion => {
     
     accordion.addEventListener("click", function() {
