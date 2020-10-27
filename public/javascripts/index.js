@@ -18,7 +18,6 @@ let url;
 
 window.addEventListener("load",function() {
     window.scrollTo(0,1);
-alert("scrolled");
 });
 
 accordion.forEach(accordion => {
