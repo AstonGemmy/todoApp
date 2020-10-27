@@ -210,7 +210,7 @@ overflow-x:hidden;
 }
 .task--content.focus {
   transform: translateY(0%);
-  padding: 16px 5px 24px 16px;
+  padding: 16px 5px 0px 16px;
 }
 
 .task--action {
@@ -405,6 +405,10 @@ overflow-x:hidden;
   /* Body section */
   .task--container {
     width:90%;
+  }
+
+  .task--cover {
+    padding:0px 5px;
   }
 
   /* Modal */
