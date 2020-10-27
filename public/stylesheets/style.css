@@ -15,7 +15,7 @@
 /* Scrollbars */
 ::-webkit-scrollbar {
   width:4px;
-  background-color: var(--pending);
+  background-color: var(--archived);
   border-radius: 50px;
 }
 
@@ -260,7 +260,7 @@ a {color: var(--anchor);}
   justify-content: center;
   padding: 0px 32px;
   width:100%;
-  color:var(--themecolor);
+  color:var(--sec-textcolor);
 }
 
 /* Task alert */
