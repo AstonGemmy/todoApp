@@ -386,11 +386,11 @@ a {color: var(--anchor);}
   }
 
   .grid-header .main {
-    margin:10px 0px 10px 32px;
+    margin:10px 0px 10px 16px;
   }
 
   .task--create {
-    margin:10px 32px 10px 0px;
+    margin:10px 16px 10px 0px;
     font-size: 15px;
   }
 
