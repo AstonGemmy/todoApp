@@ -108,7 +108,8 @@ a {color: var(--anchor);}
 /* Body section */
 .grid-body {
   grid-area: body;
-  overflow: overlay;
+  overflow-y: overlay;
+overflow-x:hidden;
 }
 
 /* Task and accessories */
@@ -136,7 +137,8 @@ a {color: var(--anchor);}
   margin: 10px auto;
   width:100%;
   max-height:250px;
-  overflow: overlay;
+  overflow-y: overlay;
+overflow-x:hidden;
   padding:0px 32px;
 }
 
