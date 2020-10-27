@@ -61,6 +61,7 @@ edit.forEach(edit => {
 
 create.addEventListener('click', function() {
     modal.style.display = 'block';
+    overlay.style.display = 'block';
     edit_form.setAttribute('action','create');
     modal.querySelector('.header').textContent = ('Create Task');
     edit_form.querySelector('input[name="title"]').value = '';
