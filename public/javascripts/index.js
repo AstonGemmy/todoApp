@@ -34,7 +34,7 @@ accordion.forEach(accordion => {
             content.style.maxHeight = null;
             content.classList.remove('focus');
         } else {            
-            content.style.maxHeight = (content.scrollHeight + 20) + "px";
+            content.style.maxHeight = (content.scrollHeight + 40) + "px";
             content.classList.add('focus');      
         } 
     
