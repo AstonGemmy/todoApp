@@ -202,9 +202,9 @@ overflow-x:hidden;
 .task--content {
   transform: translateY(200%);
   font-size: 14px;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
+  transition: height 0.25s cubic-bezier(0.075, 0.82, 0.165, 1),
     transform 0.85s cubic-bezier(0.075, 0.82, 0.165, 1),
     padding 0.55s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
