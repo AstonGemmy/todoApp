@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')    
+    title() #{meta.title}
+    link(rel='stylesheet' type='text/css' href='/stylesheets/app.css')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
+
+  body
+
+    .grid--map()
+      .grid-header()
+        if meta.name
+          h1(class='main') Tasks List
+          div(class='task--create') 
+            span(class='task--create-icon') +
+            span() New Task
+                       
+      .grid-body()
+        block content
+        
+      .grid-footer()
+        .footer-container() Copyright #{new Date().getFullYear()}
+
+    .task--modal()
+      h2(class='header')
+      form(method='post' id='edit-task')
+        input(type='text' placeholder='Title' name='title')
+        textarea(type='text' placeholder='Content' name='content' cols='100%' rows='10')
+        button(type='submit' id='edit-task-btn') Save
+        button(id='close') Cancel
+
+    #overlay()        
+        
+  script(type='text/javascript' src='/javascripts/index.js')  

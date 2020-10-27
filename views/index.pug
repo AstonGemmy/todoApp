@@ -1,0 +1,82 @@
+extends layout
+
+block content
+    .task()
+        .task--grid()
+            .task--container(class='pending')
+                .task--cover()
+                    h2(class='task--header pending') Pending
+                        .task--header-info(class='pending') #{tasks.pending.length}
+                    if tasks.pending.length > 0
+                        for task, task_index in tasks.pending        
+                            .task--wrap(class='pending')
+                                .task--title(class='pending accordion') #{task.title}
+                                .task--content()
+                                    span() #{task.content}
+                                    .task--action()
+                                        form(method='post' action=`complete/${task_index}/pending`)
+                                            button(type='submit' class='complete') Completed
+                                        span(class='edit' data-parent-id=`${task_index}`) Edit
+                                        form(method='post' action=`delete/${task_index}`)
+                                            button(type='submit' class='archive') Archive
+                                        form(method='post' action=`draft/${task_index}/pending`)
+                                            button(type='submit' class='draft') Draft
+                    else 
+                        .task--empty() No pending tasks
+
+            .task--container(class='completed')
+                .task--cover()
+                    h2(class='task--header completed') Completed
+                        .task--header-info(class='completed') #{tasks.completed.length}
+                    if tasks.completed.length > 0
+                        for task, task_index in tasks.completed
+                            .task--wrap(class='completed')
+                                .task--title(class='completed accordion') #{task.title}                            
+                                .task--content() #{task.content}
+                                    .task--action()
+                                        form(method='post' action=`pending/${task_index}/completed`)
+                                            button(type='submit' class='pending') Pending
+                                        form(method='post' action=`delete/${task_index}`)
+                                            button(type='submit' class='archive') Archive
+                                        form(method='post' action=`draft/${task_index}/completed`)
+                                            button(type='submit' class='draft') Draft
+                    else 
+                        .task--empty() No completed tasks
+
+            .task--container(class='draft')
+                .task--cover()
+                    h2(class='task--header draft') Draft
+                        .task--header-info(class='draft') #{tasks.draft.length}
+                    if tasks.draft.length > 0
+                        for task, task_index in tasks.draft        
+                            .task--wrap(class='draft')
+                                .task--title(class='draft accordion') #{task.title}
+                                .task--content() #{task.content}
+                                    .task--action()
+                                        form(method='post' action=`complete/${task_index}/draft`)
+                                            button(type='submit' class='complete') Completed
+                                        form(method='post' action=`delete/${task_index}`)
+                                            button(type='submit' class='archive') Archive
+                                        form(method='post' action=`pending/${task_index}/draft`)
+                                            button(type='submit' class='pending') Pending
+                    else 
+                        .task--empty() No saved tasks
+
+            .task--container(class='archived')
+                .task--cover()
+                    h2(class='task--header archived') Archived
+                        .task--header-info(class='archived') #{tasks.archived.length}
+                    if tasks.archived.length > 0
+                        for task, task_index in tasks.archived
+                            .task--wrap(class='archived')
+                                .task--title(class='archived accordion') #{task.title}
+                                .task--content() #{task.content}
+                                    .task--action()
+                                        form(method='post' action=`complete/${task_index}/archived`)
+                                            button(type='submit' class='complete') Completed
+                                        form(method='post' action=`pending/${task_index}/archived`)
+                                            button(type='submit' class='pending') Pending
+                                        form(method='post' action=`draft/${task_index}/archived`)
+                                            button(type='submit' class='draft') Draft
+                    else 
+                        .task--empty() No archived tasks
