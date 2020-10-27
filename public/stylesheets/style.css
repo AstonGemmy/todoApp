@@ -38,7 +38,7 @@ html, body {
   color: var(--textcolor);
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  min-height: 480px;
+  height:100vh;
   margin: 0;
   font-size: 10px;
 }
