@@ -316,7 +316,7 @@ overflow-x:hidden;
   height:100vh;
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
-  -webkit-overflow-scrolling:contain;
+  overscroll-behavior:contain;
   overflow:hidden;
   left:0;
   top:0;
