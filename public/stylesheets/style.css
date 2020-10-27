@@ -155,7 +155,7 @@ overflow-x:hidden;
 .task--header.pending {color:var(--pending);}
 .task--header.completed {color:var(--completed);}
 .task--header.archived {color:var(--archived);}
-.task--header.draft, .task--modal .header {color:var(--themecolor)}
+.task--header.draft {color:var(--draft)}
 
 .task--header-info {
   position: absolute;
@@ -336,6 +336,8 @@ overflow-x:hidden;
   padding:0px 16px 16px 16px;
   z-index: 10;
 }
+
+.task--modal .header {color:var(--themecolor)}
 
 .task--modal input {
   width:98%;
