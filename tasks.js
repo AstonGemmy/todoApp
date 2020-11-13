@@ -12,7 +12,7 @@ exports.Task = {
         },
         {
             title: 'Do Laundry',
-            content: 'Take out all cloths and lunder them before tomorrow'
+            content: 'Take out all cloths and launder them before tomorrow'
         },
         {
             title: 'Watch BBNaija',
@@ -25,7 +25,7 @@ exports.Task = {
 
         {
             title: 'Repair Generator',
-            content: 'Call Podolski to come and fix generator'
+            content: 'Call mechanic to come fix my generator'
         },
         {
             title: 'Meet Client',
